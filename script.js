@@ -4,9 +4,12 @@ window.addEventListener("load", initApp);
 
 async function initApp() {
   console.log("initApp");
-  const gliscor = await fetchJSON("data/gliscor.JSON");
+  const allPokemon = await fetchJSON("https://cederdorff.github.io/dat-js/05-data/pokemons.json");
 
-  showPokemon(gliscor);
+  // allPokemon.forEach(showPokemon);
+  for (const pokemon of allPokemon) {
+    showPokemon(pokemon);
+  }
 }
 
 async function fetchJSON(url) {
@@ -30,7 +33,7 @@ function showPokemon(pokemon) {
     const detailHTML = /*html*/ `
     <article id=pokemon-info>
       <h1>${pokemon.name}</h1>
-      <img src="${pokemon.image}">
+      <img class=pokemon-info-img src="${pokemon.image}">
       <h3>"${pokemon.description}"</h3>
       <li>Footprint: <img class="footprint"src="${pokemon.footprint}"></li>
       <li>Ability: ${pokemon.ability}</li>
