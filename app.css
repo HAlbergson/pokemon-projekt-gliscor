@@ -115,6 +115,8 @@ main {
   padding: 0.5em 1em;
   width: 100%;
   max-width: 380px;
+  display: grid;
+  margin: auto;
 }
 
 .dialog-grid {

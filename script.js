@@ -54,16 +54,16 @@ function showPokemon(pokemon) {
       <li>Pokédex index: ${pokemon.dexindex}</li>
       <button id=close-btn>Close</button>
     </article>`;
-    document.querySelector("#pokemondetails").insertAdjacentHTML("beforeend", detailHTML);
+    document.querySelector("#pokemon-details").insertAdjacentHTML("beforeend", detailHTML);
 
-    document.querySelector("#pokemondetails").showModal();
+    document.querySelector("#pokemon-details").showModal();
 
     document.querySelector("#close-btn").addEventListener("click", closeDialog);
   }
 }
 function closeDialog() {
   console.log("closeDialog");
-  document.querySelector("#pokemondetails").close();
+  document.querySelector("#pokemon-details").close();
   document.querySelector("#pokemon-info").remove();
 }
 
