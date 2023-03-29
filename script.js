@@ -9,6 +9,7 @@ async function initApp() {
   // allPokemon.forEach(showPokemon);
   for (const pokemon of allPokemon) {
     showPokemon(pokemon);
+  
   }
 }
 
@@ -66,9 +67,3 @@ function closeDialog() {
   document.querySelector("#pokemon-details").close();
   document.querySelector("#pokemon-info").remove();
 }
-
-function showGeneration() {}
-
-function showTyping() {}
-
-function getDiscription() {}
