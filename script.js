@@ -9,8 +9,12 @@ async function initApp() {
   // allPokemon.forEach(showPokemon);
   for (const pokemon of allPokemon) {
     showPokemon(pokemon);
-  
   }
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeDialog();
+    }
+  });
 }
 
 async function fetchJSON(url) {
